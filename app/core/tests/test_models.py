@@ -34,13 +34,8 @@ class ModelTests(TestCase):
         """ test creating a new superuser"""
         user = get_user_model().objects.create_superuser(
             'test@tundraProjectsolution.com',
-            'George',
-            'Kandalepas',
             'test123'
         )
 
         self.assertTrue(user.is_superuser)
         self.assertTrue(user.is_staff)
-
-
-
